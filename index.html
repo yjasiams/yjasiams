@@ -1,116 +1,962 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YJ Asia Management Services</title>
+    <title>YJ Asia Management Services | Workforce & Administrative Solutions</title>
     <meta name="google-site-verification: google468eb9eae0a28044.html" />
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0F4C81',
+                            darkblue: '#0B365D',
+                            lightblue: '#2563EB',
+                            lime: '#85B620',
+                            limedark: '#6E9918',
+                            lightbg: '#F8FAFC',
+                            slate: '#1E293B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0B365D 0%, #0F4C81 50%, #1E3A8A 100%);
+        }
+        .accent-gradient-text {
+            background: linear-gradient(135deg, #85B620 0%, #A3E635 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="bg-blue-600 text-white font-bold p-2 rounded-lg">YJ</div>
-                <span class="font-bold text-sm md:text-lg text-slate-900 tracking-tight">YJ ASIA MANAGEMENT SERVICES</span>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-lime selection:text-slate-900">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-darkblue text-slate-300 text-xs py-2 px-4 border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-id-card text-brand-lime"></i> ROC: 202203041666 (PG0524919-X)</span>
+                <span class="hidden md:inline-block text-slate-600">|</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-certificate text-brand-lime"></i> SSM Certified Service Provider</span>
             </div>
-            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-blue-600 transition">Overview</a>
-                <a href="#services" class="hover:text-blue-600 transition">Services</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-            </nav>
-            <a href="#contact" class="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">Get in Touch</a>
+            <div class="flex items-center space-x-4">
+                <a href="tel:0132272733" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-lime"></i> 013-2272733</a>
+                <a href="tel:0145757444" class="hover:text-white transition flex items-center gap-1.5"><i class="fa-solid fa-phone text-brand-lime"></i> 014-5757444</a>
+                <a href="mailto:yjasia77@gmail.com" class="hover:text-white transition hidden lg:flex items-center gap-1.5"><i class="fa-solid fa-envelope text-brand-lime"></i> yjasia77@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 shadow-sm transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 bg-white border-2 border-brand-lime rounded-xl flex items-center justify-center shadow-md p-1 group-hover:scale-105 transition-transform">
+                        <!-- Custom SVG representation of YJ Logo -->
+                        <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <rect x="5" y="5" width="90" height="90" fill="none" stroke="#85B620" stroke-width="8" rx="10"/>
+                            <path d="M 25 25 L 55 25 L 55 65 C 55 75, 45 80, 35 75 C 25 70, 25 60, 25 60" fill="none" stroke="#0F4C81" stroke-width="12" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-extrabold text-base md:text-xl text-brand-darkblue tracking-tight block leading-none">YJ ASIA</span>
+                        <span class="text-[10px] md:text-xs font-semibold text-slate-500 tracking-wider uppercase block mt-0.5">Management Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+                    <a href="#home" class="hover:text-brand-blue transition">Home</a>
+                    <a href="#about" class="hover:text-brand-blue transition">About Us</a>
+                    <a href="#services" class="hover:text-brand-blue transition">Services</a>
+                    <a href="#clients" class="hover:text-brand-blue transition">Our Clients</a>
+                    <a href="#why-us" class="hover:text-brand-blue transition">Why Choose Us</a>
+                    <a href="#contact" class="hover:text-brand-blue transition">Contact</a>
+                </nav>
+
+                <!-- Header CTA Button -->
+                <div class="hidden lg:flex items-center space-x-3">
+                    <a href="#contact" class="bg-brand-blue text-white hover:bg-brand-darkblue px-5 py-2.5 rounded-xl font-medium text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Get a Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2.5 text-slate-700 hover:text-brand-blue focus:outline-none rounded-lg border border-slate-200">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-100">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-100">About Us</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-100">Services</a>
+            <a href="#clients" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-100">Our Clients</a>
+            <a href="#why-us" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-100">Why Choose Us</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-lg text-base font-medium text-slate-800 hover:bg-slate-100">Contact Us</a>
+            <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                <a href="#contact" class="mobile-link w-full text-center bg-brand-blue text-white py-3 rounded-xl font-semibold shadow">Get a Free Consultation</a>
+            </div>
         </div>
     </header>
 
-    <section class="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Professional Solutions for Individual & Business Needs</h1>
-            <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                YJ ASIA MANAGEMENT SERVICES is your trusted service provider based in Durian Tunggal, Melaka.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#services" class="bg-white text-blue-900 font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-50 transition">Our Services</a>
-                <a href="#contact" class="border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/10 transition">Contact Us</a>
+    <!-- HERO SECTION -->
+    <section id="home" class="relative hero-gradient text-white py-20 lg:py-28 overflow-hidden">
+        <!-- Background decorative vectors -->
+        <div class="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 bg-brand-lime/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-400/10 rounded-full blur-2xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Hero Left Text Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-brand-lime font-medium text-xs sm:text-sm mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-lime animate-ping"></span>
+                        Trusted One-Stop Workforce & Management Partner
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        Comprehensive <span class="accent-gradient-text">Workforce</span> & Administrative Solutions
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-blue-100 mb-8 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Operating from Durian Tunggal, Melaka, YJ ASIA MANAGEMENT SERVICES specializes in full-scale manpower supply, foreign worker recruitment, legal compliance, permit renewals, and professional administrative support across Malaysia.
+                    </p>
+
+                    <!-- Hero Call-to-actions -->
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-12">
+                        <a href="#services" class="bg-brand-lime hover:bg-brand-limedark text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            Explore Our Services <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl backdrop-blur-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-headset"></i> Contact Us
+                        </a>
+                    </div>
+
+                    <!-- Trust Metrics Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10 text-center lg:text-left">
+                        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-lime">100%</div>
+                            <div class="text-xs text-blue-100/80 mt-1">Legal Compliance</div>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-lime">SSM</div>
+                            <div class="text-xs text-blue-100/80 mt-1">Registered Entity</div>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-lime">Full</div>
+                            <div class="text-xs text-blue-100/80 mt-1">Immigration Support</div>
+                        </div>
+                        <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                            <div class="text-xl sm:text-2xl font-extrabold text-brand-lime">Multi</div>
+                            <div class="text-xs text-blue-100/80 mt-1">Lingual Team</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Interactive/Visual Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/20 shadow-2xl relative">
+                        <div class="absolute -top-4 -right-4 bg-brand-lime text-slate-900 font-bold text-xs uppercase px-3 py-1.5 rounded-full shadow-lg">
+                            Durian Tunggal, Melaka
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-4 text-white flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-brand-lime"></i> Core Operational Areas
+                        </h3>
+                        
+                        <ul class="space-y-3 mb-6 text-sm text-blue-100">
+                            <li class="flex items-start gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-brand-lime mt-1"></i>
+                                <span><strong>Foreign Worker Recruitment:</strong> Legal sourcing, visa & passport documentation.</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-brand-lime mt-1"></i>
+                                <span><strong>Local Manpower Supply:</strong> Skilled & general workforce for factories & construction.</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-brand-lime mt-1"></i>
+                                <span><strong>Rehiring & Permits:</strong> Legalization, FWIG insurance & embassy coordination.</span>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white/5 p-3 rounded-xl border border-white/10">
+                                <i class="fa-solid fa-circle-check text-brand-lime mt-1"></i>
+                                <span><strong>Cleaning Solutions:</strong> Commercial, industrial, and post-construction deep clean.</span>
+                            </li>
+                        </ul>
+
+                        <div class="bg-white text-slate-900 p-4 rounded-2xl flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-500 block font-medium">Need immediate assistance?</span>
+                                <span class="text-sm font-bold text-brand-darkblue">Speak with our consultants</span>
+                            </div>
+                            <a href="https://wa.me/60132272733" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-2.5 rounded-xl shadow transition flex items-center gap-1.5 text-xs font-bold">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-16 px-4 max-w-4xl mx-auto">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4">Overview</h2>
-            <p class="text-slate-600 leading-relaxed mb-4">
-                YJ ASIA MANAGEMENT SERVICES is your trusted service provider based in Durian Tunggal, Melaka, offering a wide range of professional solutions to meet both individual and business needs.
-            </p>
-            <p class="text-slate-600 leading-relaxed">
-                We are committed to delivering reliable, efficient, and customer-focused services. With a strong understanding of local regulations and client needs, YJ ASIA MANAGEMENT SERVICES is here to make your processes easier and more secure.
-            </p>
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Who We Are</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Your Reliable Partner in Corporate & Workforce Management</p>
+                <div class="w-16 h-1 bg-brand-lime mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Overview Box -->
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 lg:p-10 mb-16 shadow-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">Empowering Businesses Throughout Malaysia</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            <strong>YJ ASIA MANAGEMENT SERVICES</strong> (Registration No: 202203041666 / PG0524919-X) is a trusted professional service provider based in Durian Tunggal, Melaka. We offer an all-encompassing suite of workforce and administrative solutions designed to help businesses remain compliant, efficient, and well-staffed.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            With in-depth knowledge of local Malaysian labor laws, embassy procedures, and regulatory frameworks, our experienced team simplifies complex administrative processes, enabling company owners to focus on core operations with complete peace of mind.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="border-b border-slate-100 pb-3">
+                            <span class="text-xs text-slate-400 font-semibold uppercase block">Business Name</span>
+                            <span class="text-sm font-bold text-slate-800">YJ Asia Management Services</span>
+                        </div>
+                        <div class="border-b border-slate-100 pb-3">
+                            <span class="text-xs text-slate-400 font-semibold uppercase block">SSM Registration</span>
+                            <span class="text-sm font-bold text-slate-800">202203041666 (PG0524919-X)</span>
+                        </div>
+                        <div>
+                            <span class="text-xs text-slate-400 font-semibold uppercase block">Headquarters</span>
+                            <span class="text-sm font-bold text-slate-800">Melaka, Malaysia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision & Mission Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Vision Card -->
+                <div class="bg-gradient-to-br from-brand-darkblue to-brand-blue text-white p-8 rounded-2xl shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-white/5 text-9xl font-black">V</div>
+                    <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-brand-lime text-2xl mb-6 border border-white/20">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Our Vision</h3>
+                    <p class="text-blue-100 leading-relaxed">
+                        To be a leading manpower and service provider in Malaysia, recognized nationwide for our unwavering professionalism, legal trust, and highest standards of customer satisfaction.
+                    </p>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 rounded-2xl shadow-lg relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 text-white/5 text-9xl font-black">M</div>
+                    <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-brand-lime text-2xl mb-6 border border-white/20">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Our Mission</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        To provide fast, legal, and customer-focused manpower and administrative services that help individuals and businesses operate efficiently and in strict compliance with Malaysian labor regulations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Core Values Grid -->
+            <div>
+                <h3 class="text-2xl font-bold text-center text-slate-900 mb-8">Our Core Operating Values</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center hover:border-brand-lime transition">
+                        <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Integrity</h4>
+                        <p class="text-xs text-slate-600">We operate with total honesty, ethics, and transparency in all dealings.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center hover:border-brand-lime transition">
+                        <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Efficiency</h4>
+                        <p class="text-xs text-slate-600">Delivering prompt, precise, and streamlined services to minimize client downtime.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center hover:border-brand-lime transition">
+                        <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-gavel"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Compliance</h4>
+                        <p class="text-xs text-slate-600">Adhering strictly to all Malaysian immigration and labor legal standards.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center hover:border-brand-lime transition">
+                        <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-heart-handshake"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Customer Focus</h4>
+                        <p class="text-xs text-slate-600">Your operational goals and satisfaction are always our highest priorities.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm text-center hover:border-brand-lime transition">
+                        <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 mb-2">Reliability</h4>
+                        <p class="text-xs text-slate-600">Dependable promises, consistent execution, and long-term client support.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="services" class="py-16 px-4 bg-slate-100">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 mb-2">Our Services</h2>
-                <p class="text-slate-600">Explore the professional solutions we provide</p>
+    <!-- DETAILED SERVICES SECTION -->
+    <section id="services" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">What We Provide</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Professional Solutions</p>
+                <p class="text-slate-600 mt-3 text-base">Comprehensive workforce recruitment, legal document renewal, cleaning, and insurance management under one roof.</p>
+                <div class="w-16 h-1 bg-brand-lime mx-auto mt-4 rounded-full"></div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-broom"></i></div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Cleaning Services</h3>
-                    <p class="text-slate-600 text-sm">Professional cleaning solutions tailored for diverse spaces.</p>
+
+            <!-- Service Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="service-tabs">
+                <button onclick="filterServices('all')" class="tab-btn active bg-brand-blue text-white px-5 py-2.5 rounded-xl font-medium text-sm transition shadow">All Services</button>
+                <button onclick="filterServices('manpower')" class="tab-btn bg-white text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl font-medium text-sm transition">Manpower & Recruitment</button>
+                <button onclick="filterServices('permits')" class="tab-btn bg-white text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl font-medium text-sm transition">Permits & Legalization</button>
+                <button onclick="filterServices('cleaning')" class="tab-btn bg-white text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl font-medium text-sm transition">Cleaning Services</button>
+                <button onclick="filterServices('insurance')" class="tab-btn bg-white text-slate-700 hover:bg-slate-200 px-5 py-2.5 rounded-xl font-medium text-sm transition">Insurance</button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Local Manpower Supply -->
+                <div class="service-card manpower bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Local Manpower Supply</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Reliable and qualified local staffing to satisfy workforce demands across manufacturing, logistics, construction, and service industries.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> General workers for factories & warehouses</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Skilled and semi-skilled labor</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Temporary & permanent staffing options</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Rapid deployment for urgent projects</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkblue pt-4 border-t border-slate-100">
+                        Inquire Manpower <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-users-gear"></i></div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Foreign Worker Recruitment</h3>
-                    <p class="text-slate-600 text-sm">Assisting businesses in efficiently sourcing reliable foreign workers.</p>
+
+                <!-- 2. Foreign Worker Recruitment -->
+                <div class="service-card manpower bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Foreign Worker Recruitment</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            End-to-end recruitment and placement of foreign workers from approved source countries in compliance with Malaysian Immigration.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Sourcing & screening candidates</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Visa applications & quota documentation</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Medical check-ups & orientation</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Full labor law compliance</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkblue pt-4 border-t border-slate-100">
+                        Inquire Recruitment <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-file-shield"></i></div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Permit Renewal</h3>
-                    <p class="text-slate-600 text-sm">Streamlined processing to ensure fast and compliant permit renewals.</p>
+
+                <!-- 3. Permit & Passport Renewal -->
+                <div class="service-card permits bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-file-shield"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Permit & Passport Renewal</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Seamless management of work permits and passport renewals to keep your business operating legally without disruptions.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Work permit extensions with Immigration</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Foreign embassy passport renewal coordination</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Expiry monitoring to prevent legal lapses</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Fast-track document processing</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkblue pt-4 border-t border-slate-100">
+                        Inquire Renewal <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-passport"></i></div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Passport Renewal</h3>
-                    <p class="text-slate-600 text-sm">Guidance and professional assistance for timely passport renewals.</p>
+
+                <!-- 4. Rehiring Program for Foreign Workers -->
+                <div class="service-card permits bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Foreign Worker Rehiring</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Legalization and rehiring programs that allow employers to retain experienced foreign workers legally and cost-effectively.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Worker registration & legal documentation</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> New work permits & visa endorsements</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> FOMEMA medicals, levy & insurance management</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Expert legal advisory</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkblue pt-4 border-t border-slate-100">
+                        Inquire Rehiring <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Insurance Services</h3>
-                    <p class="text-slate-600 text-sm">Reliable insurance protection plans to secure your personal and business interests.</p>
+
+                <!-- 5. Professional Cleaning Services -->
+                <div class="service-card cleaning bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-broom"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Cleaning Services</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            High-quality cleaning and hygiene maintenance tailored for commercial offices, industrial sites, and residential buildings.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Commercial & corporate office cleaning</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Industrial plant & warehouse maintenance</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Post-construction deep cleaning</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Scheduled routine contracts</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkblue pt-4 border-t border-slate-100">
+                        Inquire Cleaning <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
-                    <div class="text-blue-600 text-3xl mb-4"><i class="fa-solid fa-handshake-angle"></i></div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Rehiring Program for Foreign Workers</h3>
-                    <p class="text-slate-600 text-sm">Comprehensive assistance handling requirements for foreign worker rehiring programs.</p>
+
+                <!-- 6. Insurance Services -->
+                <div class="service-card insurance bg-white rounded-2xl p-7 shadow-sm hover:shadow-xl transition border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-6">
+                            <i class="fa-solid fa-umbrella"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Insurance Solutions</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Complete insurance coverage for foreign worker statutory schemes, workplace accident protection, and employee healthcare.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Foreign Worker Insurance Schemes (FWIG/SKHPPA)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Workplace accident & injury protection</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Hospitalization & outpatient medical plans</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-lime font-bold"></i> Mandatory legal compliance schemes</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-brand-blue hover:text-brand-darkblue pt-4 border-t border-slate-100">
+                        Inquire Insurance <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT PORTFOLIO & INDUSTRIES SECTION -->
+    <section id="clients" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Our Proven Record</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Trusted by Leading Companies</p>
+                <p class="text-slate-600 mt-3 text-base">We take pride in providing workforce and management solutions to prominent industrial and commercial clients.</p>
+                <div class="w-16 h-1 bg-brand-lime mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <!-- Industry Badges Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+                <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-200">
+                    <i class="fa-solid fa-industry text-2xl text-brand-blue mb-2"></i>
+                    <span class="block text-xs font-bold text-slate-800">Manufacturing</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-200">
+                    <i class="fa-solid fa-truck-ramp-box text-2xl text-brand-blue mb-2"></i>
+                    <span class="block text-xs font-bold text-slate-800">Logistics</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-200">
+                    <i class="fa-solid fa-wheat-awn text-2xl text-brand-blue mb-2"></i>
+                    <span class="block text-xs font-bold text-slate-800">Agriculture</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-200">
+                    <i class="fa-solid fa-helmet-safety text-2xl text-brand-blue mb-2"></i>
+                    <span class="block text-xs font-bold text-slate-800">Construction</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-200">
+                    <i class="fa-solid fa-utensils text-2xl text-brand-blue mb-2"></i>
+                    <span class="block text-xs font-bold text-slate-800">F&B & Services</span>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl text-center border border-slate-200">
+                    <i class="fa-solid fa-building-user text-2xl text-brand-blue mb-2"></i>
+                    <span class="block text-xs font-bold text-slate-800">SMEs & Large Enterprises</span>
+                </div>
+            </div>
+
+            <!-- Client List Card Grid -->
+            <div class="bg-gradient-to-br from-slate-900 to-brand-darkblue rounded-3xl p-8 sm:p-12 text-white shadow-xl">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4 border-b border-white/10 pb-6">
+                    <div>
+                        <span class="text-brand-lime font-bold text-xs uppercase tracking-wider">Corporate Roster</span>
+                        <h3 class="text-2xl font-bold text-white">Valued Business Partners & Clients</h3>
+                    </div>
+                    <span class="bg-white/10 text-xs px-4 py-2 rounded-full border border-white/20">Active Management & Supply</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="client-grid">
+                    <!-- Dynamic client list elements -->
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">KESM Industries Berhad (Melaka)</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">KESM Industries Berhad (PJ)</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Leong Hup Feedmill Malaysia</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Leong Hup Agrobusiness</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Rockwool Malaysia Sdn Bhd</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Utama Cables Sdn Bhd</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Nancy's Kitchen</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Wa Zen Japanese Restaurant</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Ace Weld Sdn Bhd</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Advanced Creation Sdn Bhd</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Eco Rubber Resources</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Primer Pack Industries</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Suntech Automotive Eng.</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">KA Construction Sdn Bhd</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">V & T Industry Transport</span>
+                    </div>
+                    <div class="bg-white/5 hover:bg-white/10 p-3.5 rounded-xl border border-white/10 flex items-center gap-3 transition">
+                        <i class="fa-solid fa-check-circle text-brand-lime"></i>
+                        <span class="text-xs font-semibold text-slate-200">Xin Garden Restaurant</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-16 px-4 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-slate-900 mb-4">Get in Touch</h2>
-        <p class="text-slate-600 mb-8 max-w-lg mx-auto">
-            Contact us today or visit our office in Durian Tunggal — let us help you manage what matters most.
-        </p>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 inline-block text-left w-full max-w-md">
-            <div class="space-y-4 text-slate-700">
-                <div class="flex items-center space-x-3">
-                    <i class="fa-solid fa-location-dot text-blue-600 w-6"></i>
-                    <span>Durian Tunggal, Melaka, Malaysia</span>
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-20 bg-slate-50 border-t border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Title & Image Box -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2 block">Competitive Advantage</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-6 leading-tight">
+                        Why Businesses Trust YJ Asia Management
+                    </h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">
+                        Navigating manpower recruitment and government legalities requires a reliable partner. We combine local expertise, official compliance, and prompt service execution.
+                    </p>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-shield-cat"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Legal & Ethical Operations</h4>
+                                <p class="text-xs text-slate-500">Full adherence to Malaysian Department of Labour (JTK) guidelines.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-language"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Multilingual Staff</h4>
+                                <p class="text-xs text-slate-500">Effective communication across Malay, English, Chinese, and native foreign languages.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-3">
-                    <i class="fa-solid fa-clock text-blue-600 w-6"></i>
-                    <span>Monday - Friday: 9:00 AM - 5:00 PM</span>
+
+                <!-- Right Cards Grid -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 bg-brand-lime/20 text-brand-darkblue rounded-lg flex items-center justify-center mb-4 text-lg font-bold">
+                            01
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">One-Stop Documentation</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            From initial recruitment and medical screening to immigration endorsements, we manage the entire lifecycle under one roof.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 bg-brand-lime/20 text-brand-darkblue rounded-lg flex items-center justify-center mb-4 text-lg font-bold">
+                            02
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Fast Turnaround Time</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Rapid deployment of local staffing and efficient handling of passport/permit extensions to avoid factory operational delays.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 bg-brand-lime/20 text-brand-darkblue rounded-lg flex items-center justify-center mb-4 text-lg font-bold">
+                            03
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Transparent Pricing</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            No hidden charges or unexpected costs. Clear quote structures tailored to your company's scale and specific needs.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                        <div class="w-10 h-10 bg-brand-lime/20 text-brand-darkblue rounded-lg flex items-center justify-center mb-4 text-lg font-bold">
+                            04
+                        </div>
+                        <h3 class="font-bold text-lg text-slate-900 mb-2">Dependable Support</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed">
+                            Our dedicated client care managers provide continuous follow-ups, expiry reminders, and emergency workforce assistance.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
-        <p>&copy; 2026 YJ ASIA MANAGEMENT SERVICES. All rights reserved.</p>
+    <!-- CONTACT US SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Get In Touch</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Let's Work Together</p>
+                <p class="text-slate-600 mt-3 text-base">Contact our team today for inquiries, quotes, or to visit our office in Durian Tunggal, Melaka.</p>
+                <div class="w-16 h-1 bg-brand-lime mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Contact Details & Address Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-gradient-to-br from-brand-darkblue to-brand-blue text-white p-8 rounded-3xl shadow-lg space-y-6">
+                        <h3 class="text-xl font-bold border-b border-white/20 pb-4">Contact Information</h3>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-brand-lime text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-blue-200 font-semibold uppercase block">Main Office</span>
+                                <p class="text-sm text-slate-100 font-medium leading-relaxed">
+                                    MC-2-48 Tingkat 3, Jalan SB Utama,<br>
+                                    Taman Seri Bayan, 75250 Melaka, Malaysia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-brand-lime text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-blue-200 font-semibold uppercase block">Phone / WhatsApp</span>
+                                <div class="text-sm text-slate-100 font-medium space-y-1 mt-1">
+                                    <a href="tel:0132272733" class="hover:text-brand-lime block transition">013-227 2733</a>
+                                    <a href="tel:0145757444" class="hover:text-brand-lime block transition">014-575 7444</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-brand-lime text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-blue-200 font-semibold uppercase block">Email Address</span>
+                                <a href="mailto:yjasia77@gmail.com" class="text-sm text-slate-100 font-medium hover:text-brand-lime transition">yjasia77@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-brand-lime text-lg shrink-0">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs text-blue-200 font-semibold uppercase block">Operating Hours</span>
+                                <p class="text-sm text-slate-100 font-medium">Monday - Friday: 9:00 AM - 5:00 PM</p>
+                                <p class="text-xs text-blue-200">Closed on Weekends & Public Holidays</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Branches / Registration Info -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-xs text-slate-600 space-y-3">
+                        <h4 class="font-bold text-slate-900 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-building text-brand-blue"></i> Registered Branches & Addresses
+                        </h4>
+                        <div>
+                            <span class="font-bold text-slate-800">Melaka Branch:</span> No 12-1, Jalan Murni 1, Taman Mas Merah, 75350 Melaka.
+                        </div>
+                        <div>
+                            <span class="font-bold text-slate-800">Pahang Registered Address:</span> No 33, Lebuhraya Kuala Lumpur, Gua Musang, 28700 Bentong, Pahang.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Contact Form -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Send Us a Message</h3>
+                    <p class="text-slate-600 text-sm mb-6">Fill out the form below and our management representative will respond within 24 hours.</p>
+
+                    <!-- Alert Box -->
+                    <div id="form-status" class="hidden mb-6 p-4 rounded-xl text-xs font-semibold"></div>
+
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Full Name *</label>
+                                <input type="text" id="form-name" required placeholder="e.g. Tan Wei Ming" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Company Name</label>
+                                <input type="text" id="form-company" placeholder="e.g. ABC Manufacturing Sdn Bhd" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number *</label>
+                                <input type="tel" id="form-phone" required placeholder="e.g. 012-3456789" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+                                <input type="email" id="form-email" required placeholder="e.g. name@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Required *</label>
+                            <select id="form-service" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm bg-white">
+                                <option value="">Select a Service</option>
+                                <option value="Foreign Worker Recruitment">Foreign Worker Recruitment</option>
+                                <option value="Local Manpower Supply">Local Manpower Supply</option>
+                                <option value="Work Permit & Passport Renewal">Work Permit & Passport Renewal</option>
+                                <option value="Foreign Worker Rehiring Program">Foreign Worker Rehiring Program</option>
+                                <option value="Professional Cleaning Services">Professional Cleaning Services</option>
+                                <option value="Insurance Services (FWIG / Medical)">Insurance Services (FWIG / Medical)</option>
+                                <option value="Other Administrative Support">Other Administrative Support</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Message / Requirements *</label>
+                            <textarea id="form-message" rows="4" required placeholder="Describe your manpower headcount requirements or administrative service inquiry..." class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-blue focus:outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-darkblue text-white font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+                <!-- Company Info Column -->
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-white border border-brand-lime rounded-lg flex items-center justify-center p-1">
+                            <svg viewBox="0 0 100 100" class="w-full h-full">
+                                <rect x="5" y="5" width="90" height="90" fill="none" stroke="#85B620" stroke-width="8" rx="10"/>
+                                <path d="M 25 25 L 55 25 L 55 65 C 55 75, 45 80, 35 75 C 25 70, 25 60, 25 60" fill="none" stroke="#0F4C81" stroke-width="12" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="font-extrabold text-white text-lg tracking-tight">YJ ASIA MANAGEMENT SERVICES</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Providing comprehensive, legal, and fast workforce and administrative management solutions for corporate clients across Malaysia.
+                    </p>
+                    <div class="text-xs text-slate-500 space-y-1">
+                        <p>ROC Registration: 202203041666 (PG0524919-X)</p>
+                        <p>Location: Durian Tunggal, Melaka</p>
+                    </div>
+                </div>
+
+                <!-- Quick Navigation -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-brand-lime transition">Home Overview</a></li>
+                        <li><a href="#about" class="hover:text-brand-lime transition">About Our Company</a></li>
+                        <li><a href="#services" class="hover:text-brand-lime transition">Our Core Services</a></li>
+                        <li><a href="#clients" class="hover:text-brand-lime transition">Valued Client Roster</a></li>
+                        <li><a href="#why-us" class="hover:text-brand-lime transition">Why Choose YJ Asia</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Key Solutions</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#services" class="hover:text-brand-lime transition">Foreign Worker Recruitment</a></li>
+                        <li><a href="#services" class="hover:text-brand-lime transition">Local Manpower Supply</a></li>
+                        <li><a href="#services" class="hover:text-brand-lime transition">Permit & Passport Renewals</a></li>
+                        <li><a href="#services" class="hover:text-brand-lime transition">Rehiring Program Legalization</a></li>
+                        <li><a href="#services" class="hover:text-brand-lime transition">Commercial Cleaning</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Summary -->
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">Direct Contacts</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-lime"></i> 013-2272733</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-lime"></i> 014-5757444</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-brand-lime"></i> yjasia77@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2026 YJ ASIA MANAGEMENT SERVICES (202203041666). All Rights Reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#home" class="hover:text-slate-300">Back to Top <i class="fa-solid fa-arrow-up text-brand-lime ml-1"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Services Filter Logic
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('.tab-btn');
+
+            // Update Tab Active Styling
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-brand-blue', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+
+            event.currentTarget.classList.add('active', 'bg-brand-blue', 'text-white');
+            event.currentTarget.classList.remove('bg-white', 'text-slate-700');
+
+            // Filter Card Display
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Interactive Form Submission Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const service = document.getElementById('form-service').value;
+            const statusBox = document.getElementById('form-status');
+
+            statusBox.className = "mb-6 p-4 rounded-xl text-xs font-semibold bg-green-100 text-green-800 border border-green-200";
+            statusBox.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Thank you, <strong>${name}</strong>! Your inquiry regarding <strong>${service}</strong> has been received. Our team will contact you shortly.`;
+            statusBox.classList.remove('hidden');
+
+            document.getElementById('contact-form').reset();
+            
+            // Auto scroll slightly to status box
+            statusBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
 </body>
 </html>
